@@ -1,5 +1,5 @@
 [package]
-name = "http-redirect"
+name = "https-redirect"
 version = "0.1.0"
 authors = ["Matthew Hartstonge <matt@mykro.co.nz>"]
 edition = "2018"
@@ -13,7 +13,5 @@ panic = 'abort'     # Abort on panic
 
 [dependencies]
 hyper = "0.13"
-log = "0.4"
-simplelog = "0.7.4"
 tokio = { version = "0.2", features = ["full"] }
 url = "1.7.2"

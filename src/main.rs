@@ -1,13 +1,8 @@
 use hyper::header::HOST;
 use hyper::service::{make_service_fn, service_fn};
 use hyper::{Body, Request, Response, Result, Server, StatusCode};
-use simplelog::*;
 use std::convert::Infallible;
 use std::net::SocketAddr;
-
-#[macro_use]
-extern crate log;
-extern crate simplelog;
 
 // redirect pulls out the requested URI and sends back a redirect.
 async fn redirect(req: Request<Body>) -> Result<Response<Body>> {
@@ -42,9 +37,6 @@ async fn redirect(req: Request<Body>) -> Result<Response<Body>> {
 
 #[tokio::main]
 async fn main() {
-    // configure logging.
-    TermLogger::init(LevelFilter::Info, Config::default(), TerminalMode::Mixed).unwrap();
-
     // We'll bind to 127.0.0.1:8080
     let addr = SocketAddr::from(([127, 0, 0, 1], 8080));
 
@@ -57,7 +49,7 @@ async fn main() {
 
     let server = Server::bind(&addr).serve(make_svc);
 
-    info!("http-redirect serving from http://127.0.0.1:8080");
+    println!("http-redirect serving from http://127.0.0.1:8080");
 
     // Run this server for... forever!
     if let Err(e) = server.await {
