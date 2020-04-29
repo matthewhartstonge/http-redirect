@@ -49,7 +49,7 @@ async fn main() {
 
     let server = Server::bind(&addr).serve(make_svc);
 
-    println!("http-redirect serving from http://127.0.0.1:8080");
+    println!("https-redirect serving from http://127.0.0.1:8080");
 
     // Run this server for... forever!
     if let Err(e) = server.await {
