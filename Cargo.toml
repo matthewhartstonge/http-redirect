@@ -1,6 +1,6 @@
 [package]
 name = "https-redirect"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Matthew Hartstonge <matt@mykro.co.nz>"]
 edition = "2018"
 
