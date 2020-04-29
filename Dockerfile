@@ -14,7 +14,7 @@ ARG BUILD_PATH="/rs/target/${TARGET}/release/https-redirect"
 # Currently we need a glibc based OS which supports dynamic linking in order to
 # build a static binary. It will fail if we using alpine for this...
 # Refer: https://github.com/rust-lang/rust/issues/40174#issuecomment-538791091
-FROM rust:1.41 AS rustc
+FROM rust:1.43-slim AS rustc
 ARG TARGET
 ARG RUSTFLAGS
 ARG BUILD_ROOT
