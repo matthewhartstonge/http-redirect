@@ -12,6 +12,6 @@ codegen-units = 1   # Reduce number of codegen units to increase optimizations.
 panic = 'abort'     # Abort on panic
 
 [dependencies]
-hyper = "0.13"
+hyper = "0.13.5"
 tokio = { version = "0.2", features = ["full"] }
-url = "1.7.2"
+url = "2.1.1"
