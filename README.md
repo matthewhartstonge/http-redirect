@@ -1,6 +1,6 @@
 # https-redirect
 
-A super lightweight https redirect server written in rust.
+A super lightweight https redirect server written in rust! (<1MiB Docker image!)
 
 ## Usage
 ### Docker
