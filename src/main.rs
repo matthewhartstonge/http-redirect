@@ -8,14 +8,8 @@ use std::net::SocketAddr;
 async fn redirect(req: Request<Body>) -> Result<Response<Body>> {
     // extract the host (and port) from the request...
     let host = match req.headers().get(HOST) {
+        Some(host_header) => host_header.to_str().unwrap_or(""),
         None => "",
-        Some(header) => {
-            let ret = match header.to_str() {
-                Ok(h) => h,
-                Err(_) => "",
-            };
-            ret
-        }
     };
 
     // extract the path and query from the request...
