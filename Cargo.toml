@@ -2,7 +2,7 @@
 name = "https-redirect"
 version = "0.1.1"
 authors = ["Matthew Hartstonge <matt@mykro.co.nz>"]
-edition = "2018"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [profile.release]
