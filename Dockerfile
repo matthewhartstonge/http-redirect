@@ -19,10 +19,10 @@ ARG TARGET
 ARG RUSTFLAGS
 ARG BUILD_ROOT
 ENV RUSTFLAGS=${RUSTFLAGS}
-COPY [".", "/rs/"]
-WORKDIR "/rs/"
-RUN rustup target add ${TARGET} &&\
-    cargo build --target ${TARGET} --release
+RUN rustup target add ${TARGET}
+WORKDIR /rs/
+COPY . /rs/
+RUN cargo build --target ${TARGET} --release
 
 ################################################################################
 #                                Containerize                                  #
